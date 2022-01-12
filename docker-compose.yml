@@ -6,12 +6,12 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=America/Los_Angeles
       - DOCKER_MODS=linuxserver/calibre-web:calibre #optional
       - OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
     volumes:
-      - /path/to/data:/config
-      - /path/to/calibre/library:/books
+      - /var/www/ebooks/config:/config
+      - /var/www/ebooks/books:/books
     ports:
       - 8083:8083
     restart: unless-stopped
